@@ -1,0 +1,42 @@
+<!-- posts -->
+<!-- <button id="btn" routerLink="/form">to form ->></button> -->
+<div class="card m-4" *ngFor="let listing of posts" [hidden]="showPost">
+    
+  <!-- <div (click)="onClick(listing.id)"> -->
+    <div>
+    <h5 class="card-header">
+      {{ listing.id }}
+      {{ listing.title }}
+    </h5>
+    <div class="card-body">
+      <p class="card-text">
+        {{ listing.body }}
+      </p>
+    </div>
+  </div>
+  <div class="card m-4" *ngFor="let comment of posts[6].comments" [hidden]="showPost">
+    <div>
+        <h5 class="card-header">
+            {{ comment.id }}
+            {{ comment.email }}
+        </h5>
+        <h5 class="card-header">
+         {{ comment.name }}
+        </h5>
+        <div class="card-body">
+        <p class="card-text">
+         {{ comment.body }}
+        </p>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<!--comments--> 
+<!-- <div class="card m-4" [hidden]="!showPost"> -->
+  <!-- <button (click)="backBtn()">back</button> -->
+  <!-- <button>back</button>
+</div> -->
+
+<!-- After Btn click -->
